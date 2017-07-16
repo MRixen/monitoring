@@ -76,8 +76,6 @@ void receiveEvent(int numBytes) {
 		digitalWrite(do_motorDirection1, HIGH);
 		digitalWrite(do_motorDirection2, LOW);
 	}
-	//Serial.println(soll_pwm_in);
-	Serial.println(digitalRead(di_motorDirection1));
 }
 
 void loop()
@@ -88,8 +86,6 @@ void loop()
 	else soll_pwm_out = 0; // Set to zero / stop motor
 
 	analogWrite(do_pwm, (int)soll_pwm_out);
-
-	//Serial.println(soll_pwm_out);
 
 
 	//bool temperatureIsOk(int thermistor) {
